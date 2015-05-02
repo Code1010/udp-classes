@@ -27,7 +27,6 @@ public class Frontend {
 		UDPServer server = new UDPServer(9137);
 		
 		while(true){
-			System.out.println("Looking for new stuff...");
 			if(server.newDataAvailable){
 				String n = server.getData();
 				System.out.println(n);
@@ -53,7 +52,6 @@ public class Frontend {
 		UDPClient client = new UDPClient(ip, port);
 		
 		while(true){
-			System.out.println("Looking for new stuff...");
 			if(client.newDataAvailable){
 				String n = client.getData();
 				System.out.println(n);
