@@ -53,6 +53,8 @@ public class Frontend {
 		
 		UDPClient client = new UDPClient(ip, port);
 		
+		client.sendData("Hellow World!");
+		
 		while(true){
 			if(client.newDataAvailable){
 				String n = client.getData();

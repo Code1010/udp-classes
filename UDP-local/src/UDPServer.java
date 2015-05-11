@@ -84,21 +84,7 @@ public class UDPServer implements Runnable{
   				serverSocket.receive(receivePacket); //waits for a packet to come in
 
   				received = new String(receivePacket.getData());
-  				newDataAvailable = true;
-  				
-  				if(received.equals("::CONNECTED::")){
-  					newDataAvailable = false;
-  					received = "";
-  					sendData = "::HELLO::".getBytes();
-  					DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, clientIP, portNum);
-  				      try {
-  						serverSocket.send(sendPacket);
-  					} catch (IOException e) {
-  						// TODO Auto-generated catch block
-  						e.printStackTrace();
-  					}
-  				}
-  				
+  				newDataAvailable = true;  				
   				
   				clientIP = receivePacket.getAddress();
                 clientPort = receivePacket.getPort();

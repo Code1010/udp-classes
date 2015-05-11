@@ -32,27 +32,7 @@ public class UDPClient implements Runnable {
 		
 		sendData = new byte[1024];
 		receiveData = new byte[1024];
-		
-		System.out.println("Contacting Server");
-		sendData = "::CONNECT::".getBytes();
-		DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, serverIP, portNum);
-	      try {
-			serverSocket.send(sendPacket); //sent the connection message
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	      
-	    DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-	      
-		try {
-			serverSocket.receive(receivePacket);
-		} catch (IOException e) {
-		// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("Connection to server successfully established!");
-		
+
 		Thread t = new Thread(this);
 		t.start();
 	}
