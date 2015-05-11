@@ -32,6 +32,7 @@ public class Frontend {
 			if(server.newDataAvailable){
 				String n = server.getData();
 				System.out.println(n);
+				server.sendData("I got ur message!");
 			}
 			
 			try {
