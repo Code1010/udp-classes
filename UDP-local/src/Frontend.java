@@ -3,11 +3,7 @@ import java.util.Scanner;
 
 
 public class Frontend {
-	
-	
-/*
-	Let's see if this works.....
-*/	
+
 	public static void main(String [] args){
 		Scanner in = new Scanner(System.in);
 		
