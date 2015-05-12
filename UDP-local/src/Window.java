@@ -22,11 +22,21 @@ public class Window extends JPanel {
 		JFrame frame = new JFrame("Wire Warfare");
 		Window game = new Window();
 		frame.add(game);
+		BufferedImage icon;
+		try {
+			icon = ImageIO.read(new File("src/WireWarfareLogo.png"));
+			frame.setIconImage(icon);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		frame.setSize(910, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
+		
+		
 		
 	}
 	
