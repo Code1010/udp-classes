@@ -1,7 +1,7 @@
 
 public class Computer {
 
-	private int delay;
+	public int delay;
 	private double heatPercentage;
 	private double heatProduced;
 	private double coolingEquipment;
@@ -22,6 +22,10 @@ public class Computer {
 		fs = new FileSystem();
 	}
 	
+	public VulnerableFile getAFile(){
+		return fs.getFile((int) (Math.random() * fs.files.size()));
+	}
+	
 	public static String generateRandomIP(){
 		int f = (int) ((256-100)*Math.random() + 100);
 		int s = (int) ((256-100)*Math.random() + 100);
@@ -30,13 +34,7 @@ public class Computer {
 		
 		return String.format("%d.%d.%d.%d", f, s, t, fo);
 	}
-	
-	public int getDelay() {
-		return delay;
-	}
-	public void setDelay(int delay) {
-		this.delay = delay;
-	}
+
 	public double getHeatPercentage() {
 		return heatPercentage;
 	}
