@@ -20,8 +20,8 @@ public class Window extends JPanel {
 
 	public static void main(String [] args) throws InterruptedException{
 		JFrame frame = new JFrame("Wire Warfare");
-		Window game = new Window();
-		frame.add(game);
+		Window window = new Window();
+		frame.add(window);
 		BufferedImage icon;
 		try {
 			icon = ImageIO.read(new File("src/WireWarfareLogo.png"));
@@ -30,7 +30,7 @@ public class Window extends JPanel {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		frame.setSize(910, 550);
+		frame.setSize(907, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.setResizable(false);
@@ -43,11 +43,11 @@ public class Window extends JPanel {
 		Graphics2D gd = (Graphics2D) g;
 		gd.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 		gd.setColor(Color.GRAY);
-		gd.fillRect(0, 0, 910, 590);
+		gd.fillRect(0, 0, 907, 550);
 		try {
 			BufferedImage img;
 			img = ImageIO.read(new File("src/border.png"));
-			gd.drawImage(img, -17, -17, null);
+			gd.drawImage(img, -20, -20, null);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
