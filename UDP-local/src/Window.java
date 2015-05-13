@@ -35,9 +35,6 @@ public class Window extends JPanel {
 		frame.setVisible(true);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
-		
-		
-		
 	}
 	
 	@Override
