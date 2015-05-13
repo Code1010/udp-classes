@@ -9,6 +9,7 @@ public class Computer {
 	private boolean on;
 	private String ip;
 	private String location;
+	private FileSystem fs;
 	
 	public Computer(){
 		delay = 100;
@@ -18,7 +19,7 @@ public class Computer {
 		on = true;
 		ip = generateRandomIP();
 		location = Location.getLocation();
-		
+		fs = new FileSystem();
 	}
 	
 	public static String generateRandomIP(){

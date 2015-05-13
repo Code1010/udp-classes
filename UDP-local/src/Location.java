@@ -10,7 +10,7 @@ public class Location {
 			 "Hogwarts"};
 	
 	public static String getLocation(){
-		int index = (int) ((places.length - 1) * Math.random());
+		int index = (int) ((places.length) * Math.random());
 		return places[index];
 	}
 	
