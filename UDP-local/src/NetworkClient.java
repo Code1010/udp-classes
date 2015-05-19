@@ -37,6 +37,8 @@ public class NetworkClient {
 			String location = cmd.substring(cmd.indexOf("@") + 1,
 					cmd.indexOf("]"));
 			file(op, name, location);
+		} else if(cmd.equals("NET")) {
+			String op = data.substring(0, data.indexOf("::"));
 		}
 	}
 
