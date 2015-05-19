@@ -5,5 +5,5 @@ public class Player {
 	private double money;
 	private Computer computer;
 	private Bank bank;
-	
+
 }
