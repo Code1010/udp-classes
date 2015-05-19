@@ -3,6 +3,15 @@ import java.util.ArrayList;
 public class FileSystem {
 	ArrayList<VulnerableFile> files = new ArrayList<VulnerableFile>();
 	
+	public boolean fileExists(String loc, String name){
+		for(VulnerableFile f : files){
+			if((f.getLocation().equals(loc)) && (f.getName().equals(name))){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public void addFile(VulnerableFile f){
 		files.add(f);
 	}

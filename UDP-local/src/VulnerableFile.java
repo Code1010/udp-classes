@@ -35,4 +35,7 @@ public class VulnerableFile {
 		this.location = location;
 	}
 	
+	public String toString(){
+		return data;
+	}
 }

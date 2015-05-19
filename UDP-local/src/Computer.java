@@ -34,6 +34,10 @@ public class Computer {
 		
 		return String.format("%d.%d.%d.%d", f, s, t, fo);
 	}
+	
+	public boolean fileExists(String loc, String name){
+		return fs.fileExists(loc, name);
+	}
 
 	public double getHeatPercentage() {
 		return heatPercentage;
